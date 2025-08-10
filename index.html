@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -7,95 +6,93 @@
     <title>Form Pendaftaran - Fortune Excellent Network</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+            color: white;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            color: white;
         }
-        header {
-            text-align: center;
-            padding: 20px;
-        }
-        header img {
-            max-width: 120px;
-            margin-bottom: 10px;
-        }
-        h1 {
-            font-size: 28px;
-            margin: 0;
-        }
-        form {
-            background: rgba(255, 255, 255, 0.1);
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            background: rgba(0, 0, 0, 0.6);
             padding: 20px;
             border-radius: 10px;
-            width: 90%;
-            max-width: 500px;
-            margin: auto;
-            margin-bottom: 40px;
+        }
+        img.logo {
+            display: block;
+            margin: 0 auto 10px;
+            width: 150px;
+        }
+        h1, h3 {
+            text-align: center;
         }
         label {
-            font-weight: bold;
             display: block;
-            margin-top: 15px;
+            margin-top: 10px;
         }
         input, select, textarea {
             width: 100%;
-            padding: 10px;
+            padding: 8px;
             margin-top: 5px;
+            border-radius: 5px;
+            border: none;
+        }
+        button {
+            background-color: orange;
+            color: white;
+            padding: 10px;
             border: none;
             border-radius: 5px;
-            box-sizing: border-box;
-        }
-        input[type="submit"] {
-            background-color: #ff9800;
-            color: white;
-            font-size: 16px;
+            width: 100%;
+            margin-top: 15px;
             cursor: pointer;
-            margin-top: 20px;
         }
-        input[type="submit"]:hover {
-            background-color: #e68900;
+        button:hover {
+            background-color: darkorange;
         }
     </style>
 </head>
 <body>
-    <header>
-        <img src="https://raw.githubusercontent.com/fortuneexcellentnetwork/pendaftaran-fortune-2/main/logo.png" alt="Logo Fortune Excellent Network">
+
+    <div class="container">
+        <!-- Logo di atas form -->
+        <img src="logo.png" alt="Logo Fortune Excellent Network" class="logo">
         <h1>Form Pendaftaran</h1>
-        <p>PT. Fortune Excellent Network</p>
-    </header>
+        <h3>PT. Fortune Excellent Network</h3>
 
-    <form action="https://formspree.io/f/mzzbgjka" method="POST" enctype="multipart/form-data">
-        <label>Nama Lengkap:</label>
-        <input type="text" name="nama_lengkap" required>
+        <form action="https://formspree.io/f/your-form-id" method="POST" enctype="multipart/form-data">
+            <label>Nama Lengkap:</label>
+            <input type="text" name="nama" required>
 
-        <label>Gender:</label>
-        <select name="gender" required>
-            <option value="">-- Pilih Gender --</option>
-            <option value="Laki-laki">Laki-laki</option>
-            <option value="Perempuan">Perempuan</option>
-        </select>
+            <label>Gender:</label>
+            <select name="gender" required>
+                <option value="">-- Pilih Gender --</option>
+                <option value="Laki-laki">Laki-laki</option>
+                <option value="Perempuan">Perempuan</option>
+            </select>
 
-        <label>Alamat:</label>
-        <textarea name="alamat" rows="2" required></textarea>
+            <label>Alamat:</label>
+            <textarea name="alamat" rows="2" required></textarea>
 
-        <label>Email:</label>
-        <input type="email" name="email" required>
+            <label>Email:</label>
+            <input type="email" name="email" required>
 
-        <label>No HP / WA Aktif:</label>
-        <input type="text" name="no_hp" required>
+            <label>No HP / WA Aktif:</label>
+            <input type="text" name="no_hp" required>
 
-        <label>Posisi yang Dilamar:</label>
-        <input type="text" name="posisi" required>
+            <label>Posisi yang Dilamar:</label>
+            <input type="text" name="posisi" required>
 
-        <label>Upload CV:</label>
-        <input type="file" name="cv" accept=".pdf,.doc,.docx" required>
+            <label>Upload CV:</label>
+            <input type="file" name="cv">
 
-        <label>Dokumen Pendukung Lainnya:</label>
-        <input type="file" name="dokumen_lain" accept=".pdf,.doc,.docx">
+            <label>Dokumen Pendukung Lainnya:</label>
+            <input type="file" name="dokumen">
 
-        <input type="submit" value="Kirim Pendaftaran">
-    </form>
+            <button type="submit">Kirim Pendaftaran</button>
+        </form>
+    </div>
+
 </body>
 </html>
